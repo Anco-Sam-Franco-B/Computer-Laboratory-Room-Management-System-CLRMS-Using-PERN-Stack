@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_URL || '/api';
+const baseURL = import.meta.env.VITE_API_URL || 'https://computer-laboratory-room-management.onrender.com/api';
 
 export const api = axios.create({ baseURL });
 
