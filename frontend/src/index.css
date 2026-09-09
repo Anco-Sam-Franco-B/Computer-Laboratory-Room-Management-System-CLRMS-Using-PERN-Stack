@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-slate-100 text-slate-800 dark:bg-surface-950 dark:text-slate-200;
+  }
+  * {
+    @apply border-slate-200 dark:border-slate-800;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-300 dark:bg-slate-700;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border bg-white p-4 shadow-card dark:bg-surface-900;
+  }
+  .input {
+    @apply w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2 text-sm text-slate-800 outline-none transition
+      focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30
+      dark:border-slate-600 dark:bg-surface-800 dark:text-slate-100 placeholder:text-slate-400;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition
+      focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700 focus:ring-brand-500/50 dark:bg-brand-600;
+  }
+  .btn-secondary {
+    @apply btn border bg-white text-slate-700 hover:bg-slate-50 dark:bg-surface-800 dark:text-slate-200 dark:hover:bg-surface-800/70;
+  }
+  .btn-danger {
+    @apply btn bg-rose-600 text-white hover:bg-rose-700 focus:ring-rose-500/50;
+  }
+  .btn-emerald {
+    @apply btn bg-emerald-600 text-white hover:bg-emerald-700 focus:ring-emerald-500/50;
+  }
+  .btn-ghost {
+    @apply btn text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800;
+  }
+  .th {
+    @apply px-3 py-2.5 text-left text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400;
+  }
+  .td {
+    @apply px-3 py-3 text-sm text-slate-700 dark:text-slate-300;
+  }
+}
+
+.chart-tooltip {
+  @apply rounded-lg border bg-white px-3 py-2 text-sm shadow-card dark:bg-surface-800 dark:text-slate-100;
+}
