@@ -41,7 +41,7 @@ app.set('trust proxy', 1);
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(
   cors({
-    origin: process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ['https://clrms.onrender.com'],
+    origin: process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : ['https://clrms.onrender.com', 'http://localhost:5173'],
     credentials: true,
   })
 );
